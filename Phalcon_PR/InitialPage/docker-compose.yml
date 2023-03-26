@@ -1,0 +1,67 @@
+# For local development only.
+
+version: '3'
+
+services:
+  phalcon-8.0:
+    container_name: phalcon-8.0
+    hostname: phalcon-80
+    build: docker/8.0
+    working_dir: /srv
+    volumes:
+      - .:/srv
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  phalcon-8.1:
+    container_name: phalcon-8.1
+    hostname: phalcon-81
+    build: docker/8.1
+    working_dir: /srv
+    volumes:
+      - .:/srv
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  phalcon-8.2:
+    container_name: phalcon-8.2
+    hostname: phalcon-82
+    build: docker/8.2
+    working_dir: /srv
+    volumes:
+      - .:/srv
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  mysql:
+    container_name: phalcon-mysql
+    image: mysql:5.7
+    environment:
+      - MYSQL_ROOT_PASSWORD=secret
+      - MYSQL_USER=phalcon
+      - MYSQL_DATABASE=phalcon
+      - MYSQL_PASSWORD=secret
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  postgres:
+    container_name: phalcon-postgres
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_PASSWORD=secret
+      - POSTGRES_USER=phalcon
+      - POSTGRES_DB=phalcon
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  redis:
+    container_name: phalcon-redis
+    image: redis:6-alpine
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  memcached:
+    container_name: phalcon-memcached
+    image: memcached:1.6-alpine
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
