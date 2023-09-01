@@ -1,5 +1,5 @@
 <?php
-/**
+/*
  * 四角形の面積を求める関数
  * $base   => 底辺
  * $height => 高さ
@@ -8,7 +8,7 @@
         return $base * $height;
     }
 
-/**
+/*
  * 三角形の面積を求める関数
  * $base   => 底辺
  * $height => 高さ
@@ -17,7 +17,7 @@
         return $base * $height / 2;
     }
 
-/**
+/*
  * 台形の面積を求める関数
  * $upperBase => 上底
  * $lowerBase => 下底
