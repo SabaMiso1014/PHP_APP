@@ -61,7 +61,7 @@
 
     // 送信先のメールアドレス
     if($_POST) {
-        $to = 'youraddress@example.com';
+        $to = 'y.honjo@reedex.co.jp';
 
         // 送信先のメールの題名
         $subject = 'お問い合わせがありました';

@@ -72,7 +72,11 @@
                 <textarea id="message" name="message" value="<?php echo isset($original['message']) ? $original['message'] : null;?>" required></textarea>
                 <?php echo isset($original['message']) ? $original['message'] : null;?>
             </div>
+            <!-- CSRF対策 -->
+            <input type="hidden" name="csrf_token" value="<?php echo $csrf_token; ?>" />
+            <!-- 確認ボタン -->
             <input type="submit" value="確認">
+            <!-- リセットボタン -->
             <input type="reset" value="リセット">
         </form>
     </body>
