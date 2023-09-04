@@ -8,7 +8,7 @@
         $phone = $_POST["phone"];
         $message = $_POST["message"]; 
     } else { 
-        header("Location: contact.php"); 
+        header("Location: index.php"); 
     } 
 ?>
 

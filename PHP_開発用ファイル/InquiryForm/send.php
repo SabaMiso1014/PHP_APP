@@ -17,7 +17,7 @@
             $message = "エラーが発生しました。お手数ですがもう一度お試しください。";
         }
     } else {
-        header("Location: contact.php");
+        header("Location: index.php");
     }
 ?>
 
@@ -28,6 +28,6 @@
     <body>
         <h1>お問い合わせフォーム - 送信完了画面</h1>
         <p><?php echo $message; ?></p>
-        <p><a href="contact.php">お問い合わせフォームに戻る</a></p>
+        <p><a href="index.php">お問い合わせフォームに戻る</a></p>
     </body>
 </html>
